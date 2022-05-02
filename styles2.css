@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/*rick and morty*/
+.site-logo {
+    height: 35px;
+}
+.myCarousel {   
+    width: 100vw;  
+    top:0;
+    position: relative;  
+}
+.img1 {
+    height: 482px;
+    object-fit: contain;
+}
+/*loader */
+.loader2 {
+    height: 10vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;      
+  }
+ 
+  .scanning {
+    color: #8f8f8f66;
+    letter-spacing: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  .scanning::before {
+    content: "rick&morty... ";
+    color: #fffe07;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 2px solid #fffe07;
+    box-shadow: 0 0 10px;
+    text-indent: 10px;
+    width: 0;
+    overflow: hidden;
+    animation: scanning 6s cubic-bezier(0.5, 0, 0.7, 0.2) infinite;
+  }
+  
+  @keyframes scanning {
+    0%,
+    100% {
+      width: 0;
+    }
+  
+    10%,
+    30% {
+      width: 42%;
+    }
+  
+    10%,
+    80% {
+      width: 100%;
+    }
+  }
